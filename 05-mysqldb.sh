@@ -11,7 +11,7 @@ else
 fi
 
     VALIDATE(){
-        if [ $? -eq 0 ]
+        if [ $1 -eq 0 ]
             echo "INSTALLING $2 is ...... SUCCESS"
         else 
             echo "INSTALLING $2 is ...... FAILURE"
