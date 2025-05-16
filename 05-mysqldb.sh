@@ -10,6 +10,13 @@ else
     echo "You are running the script with ROOT access"
 fi
 
+    VALIDATE(){
+        if [ $? -eq 0 ]
+            echo "INSTALLING $2 is ...... SUCCESS"
+        else 
+            echo "INSTALLING $2 is ...... FAILURE"
+            exit 1
+    }
 
 #Installing MySQL
 
@@ -18,13 +25,7 @@ if [ $? -ne 0 ]
 then
     echo "MYSQL is not installed......going to install now"
     dnf install mysql-server -y
-    if [ $? -eq 0 ]
-    then
-        echo "INSTALLING MYSQL is ...... SUCCESS"
-    else
-        echo "INSTALLING MYSQL is ...... FAILURE"
-        exit 1
-    fi
+    VALIDATE $? "MySQL"
 else
     echo "MYSQL is already INSTALLED....... Nothing to do"
 fi
@@ -37,13 +38,7 @@ if [ $? -ne 0 ]
 then
     echo "Nginx is not installed......going to install now"
     dnf install nginx -y
-    if [ $? -eq 0 ]
-    then
-        echo "INSTALLING Nginx is ...... SUCCESS"
-    else
-        echo "INSTALLING Nginx is ...... FAILURE"
-        exit 1
-    fi
+    VALIDATE $? "Nginx"
 else
     echo "Nginx is already INSTALLED....... Nothing to do"
 fi
@@ -56,13 +51,7 @@ if [ $? -ne 0 ]
 then
     echo "nodejs is not installed......going to install now"
     dnf install nginx -y
-    if [ $? -eq 0 ]
-    then
-        echo "INSTALLING nodejs is ...... SUCCESS"
-    else
-        echo "INSTALLING nodejs is ...... FAILURE"
-        exit 1
-    fi
+   VALIDATE $? "nodejs"
 else
     echo "nodejs is already INSTALLED....... Nothing to do"
 fi
