@@ -53,6 +53,8 @@ dnf list installed nodejs
 if [ $? -ne 0 ]
 then
     echo "nodejs is not installed......going to install now"
+    dnf module disable nodejs -y
+    dnf module enable nodejs:20 -y
     dnf install nginx -y
    VALIDATE $? "nodejs"
 else
