@@ -49,14 +49,12 @@ fi
 
 #Installing NodeJS
 
-dnf list installed nodejs:20
+dnf list installed python3
 if [ $? -ne 0 ]
 then
-    echo "nodejs is not installed......going to install now"
-    dnf module disable nodejs -y
-    dnf module enable nodejs:20 -y
-    dnf install nginx -y
-   VALIDATE $? "nodejs"
+    echo "python3 is not installed......going to install now"
+    dnf install python3 -y
+   VALIDATE $? "python3"
 else
-    echo "nodejs is already INSTALLED....... Nothing to do"
+    echo "python3 is already INSTALLED....... Nothing to do"
 fi
