@@ -7,4 +7,4 @@ MOVIES=("POKIRI" "OKKADU" "ATHADU" "DOOKUDU")
     echo "(Third movie : ${MOVIES[2]})"
     echo "(Fourth movie : ${MOVIES[3]})"
 
-    echo "(All movies : ${MOVIES[@]})
+    echo "(All movies : ${MOVIES[@]})"
