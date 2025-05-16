@@ -30,7 +30,7 @@ dnf list installed nginx
 if [ $? -ne 0 ]
 then
     echo "Nginx is not installed......going to install now"
-    dnf install nginx:20 -y
+    dnf install nginx:1.24 -y
     if [ $? -eq 0 ]
     then
         echo "INSTALLING Nginx is ...... SUCCESS"
