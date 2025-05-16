@@ -10,6 +10,9 @@ else
     echo "You are running the script with ROOT access"
 fi
 
+
+#Installing MySQL
+
 dnf list installed mysql
 if [ $? -ne 0 ]
 then
@@ -26,6 +29,9 @@ else
     echo "MYSQL is already INSTALLED....... Nothing to do"
 fi
 
+
+#Installing Nginx
+
 dnf list installed nginx
 if [ $? -ne 0 ]
 then
@@ -40,4 +46,23 @@ then
     fi
 else
     echo "Nginx is already INSTALLED....... Nothing to do"
+fi
+
+
+#Installing NodeJS
+
+dnf list installed nodejs
+if [ $? -ne 0 ]
+then
+    echo "nodejs is not installed......going to install now"
+    dnf install nginx -y
+    if [ $? -eq 0 ]
+    then
+        echo "INSTALLING nodejs is ...... SUCCESS"
+    else
+        echo "INSTALLING nodejs is ...... FAILURE"
+        exit 1
+    fi
+else
+    echo "nodejs is already INSTALLED....... Nothing to do"
 fi
