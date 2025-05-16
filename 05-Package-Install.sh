@@ -60,14 +60,14 @@ dnf list installed python3
 fi
 
 
-#Installing rabbitmq
+#Installing Maven
 
-dnf list installed rabbitmq
+dnf list installed maven
     if [ $? -ne 0 ]
     then
-        echo "Rabbitmq is not installed......going to install now"
-        dnf install rabbitmq-server -y
-        VALIDATE $? "Rabbitmq"
+        echo "maven is not installed......going to install now"
+        dnf install maven -y
+        VALIDATE $? "maven"
     else
-        echo "Rabbitmq is already INSTALLED....... Nothing to do"
+        echo "maven is already INSTALLED....... Nothing to do"
 fi
