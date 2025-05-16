@@ -17,7 +17,9 @@ fi
         else 
             echo "INSTALLING $2 is ...... FAILURE"
             exit 1
+        fi
     }
+
 
 #Installing MySQL
 
