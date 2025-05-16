@@ -49,7 +49,7 @@ fi
 
 #Installing NodeJS
 
-dnf list installed nodejs
+dnf list installed nodejs:20
 if [ $? -ne 0 ]
 then
     echo "nodejs is not installed......going to install now"
