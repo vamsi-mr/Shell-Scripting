@@ -59,15 +59,3 @@ dnf list installed python3
         echo "python3 is already INSTALLED....... Nothing to do"
 fi
 
-
-#Installing Maven
-
-dnf list installed maven
-    if [ $? -ne 0 ]
-    then
-        echo "maven is not installed......going to install now"
-        dnf install maven -y
-        VALIDATE $? "maven"
-    else
-        echo "maven is already INSTALLED....... Nothing to do"
-fi
