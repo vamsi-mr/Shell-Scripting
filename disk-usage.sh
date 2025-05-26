@@ -17,4 +17,4 @@ done <<< $DISK_USAGE
 
 #echo -e $MSG
 
-sh mail.sh "Uday Kumar Vurukuti" "Mobile is hacked" "$IP" "$MSG" "vogitox259@nomrista.com" "ALERT..Mobile is hacked"
+sh mail.sh "Uday Kumar Vurukuti" "Mobile is hacked" "$IP" "$MSG" "uday232000@gmail.com" "ALERT..Mobile is hacked"
